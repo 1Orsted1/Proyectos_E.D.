@@ -15,67 +15,29 @@ import static e1.apoyaIncercion.Insercion;
  */
 public class paresEimpares_Ej11 {
   
+
+    
     public static void main(String[] args) {
-        int n = 0;
-        apoyoBurbuja bj = new apoyoBurbuja();
-        Scanner sc = new Scanner(System.in);
-
-        do {
-            System.out.println("numero a ingresar mayor a 10 ");
-            n = sc.nextInt();
-
-        } while (n < 10);
-       
-        int arre[] = new int[n];
-        int f = 0, g = 0;
-        int q = 1;
-        for (int i = 0; i < n; i++, q++) {
-            System.out.println("ingresa el valor " + q);
-            arre[i] = sc.nextInt();
-            if (arre[i] % 2 == 0) {
-
-                f++;
-
-            } if(arre[i] % 2 != 0) {
-
-                g++;
-            }
-
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Cuantos numeros deseas ingresar? ");
+        int a = sc.nextInt();
+        int arreglo[] =  new int[a];
+        int x[] = new int[a];
+        int c[] = new int [a];
+        int q=0, w =0;
+        for (int i = 0; i < arreglo.length; i++) {
+           arreglo[i]= sc.nextInt();
+           
+           if(arreglo[i]%2==0){
+           c[q]=arreglo[i];
+           q++;
+           }else if(arreglo[i]%2!=0){
+            x[w] = arreglo[i];
+            w++;
         }
-       
-        int c[] = new int[f];
-        int x[] = new int[g];
-        int k = 0;
-        int m = 0;
-        
-        for (int i = 0; i < n; i++) {
-            if (arre[i] % 2 == 0) {
-
-                c[k] = arre[i];
-                k++;
-            }
-        }
-        for (int j = 0; j < n; j++) {
-          if(arre[j] % 2 != 0) {
-
-               x[m] = arre[j];
-               m++;
-            }        
-            }
-        
-        c = bj.burbuja(c);
-        Insercion(x);
-        System.out.print("arreglo de impares: ");
-        System.out.print("[");
-        for (int i = 0; i < x.length; i++) {
-
-            System.out.print(x[i]+", ");
-
-        }
-         System.out.print("]");
-        System.out.print(" arreglo de pares: ");
-        System.out.print(Arrays.toString(c));
-      
+            
     }
-
+       System.out.print(Arrays.toString(x));
+        System.out.print(Arrays.toString(c));
+    }
 }

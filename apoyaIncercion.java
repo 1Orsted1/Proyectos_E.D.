@@ -30,5 +30,21 @@ int aux,i,o;
 
 	}
     
-    
+        public int[] Insercion2(int x[]){
+int aux,i,o;
+	for(i = 0; i<x.length;i++ ){
+	aux = x[i];
+		for(o = i-1; o>=0 && x[o]<aux; o--){
+			x[o+1]=x[o];
+			x[o]=aux;
+
+
+			}
+                      x[o+1]=aux;
+
+		}
+
+
+return x;
+	}
 }
