@@ -16,15 +16,18 @@ import static e1.apoyaIncercion.Insercion;
 public class paresEimpares_Ej11 {
 
     public static void main(String[] args) {
+        //Importacion de metodos
         apoyoBurbuja bj =new apoyoBurbuja();
         apoyaIncercion in = new apoyaIncercion();
         Scanner sc = new Scanner(System.in);
+       //Pide la variable de la dimencion del arreglo
         System.out.println("Cuantos numeros deseas ingresar? ");
         int a = sc.nextInt();
         int arreglo[] = new int[a];
         int x[] = new int[a];
         int c[] = new int[a];
         int q = 0, w = 0;
+        //unico for de asignacion
         for (int i = 0; i < arreglo.length; i++) {
             arreglo[i] = sc.nextInt();
 
@@ -35,10 +38,11 @@ public class paresEimpares_Ej11 {
                 x[w] = arreglo[i];
                 w++;
             }
-
+        //ordenamientos
           x=in.Insercion2(x);
           c=bj.burbuja(c);  
         }
+        //impreciones de arreglos
         System.out.println("Arreglo original: ");
         for (int i = 0; i < arreglo.length; i++) {
 
@@ -61,7 +65,7 @@ public class paresEimpares_Ej11 {
         }
         System.out.println("");
         
-
+        //otra forma de hacerlo
         //System.out.print(Arrays.toString(x));
         //System.out.print(Arrays.toString(c));
     }
