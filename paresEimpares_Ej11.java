@@ -20,9 +20,19 @@ public class paresEimpares_Ej11 {
         apoyoBurbuja bj =new apoyoBurbuja();
         apoyaIncercion in = new apoyaIncercion();
         Scanner sc = new Scanner(System.in);
-       //Pide la variable de la dimencion del arreglo
-        System.out.println("Cuantos numeros deseas ingresar? ");
-        int a = sc.nextInt();
+       //Pide la variable de la dimencion del arreglo mayor a 10
+        int a;
+        do {
+            System.out.println("numero a ingresar mayor a 10 ");
+            a = sc.nextInt();
+
+        } while (a < 10);
+
+
+//       System.out.println("Cuantos numeros deseas ingresar? ");
+//        int a = sc.nextInt();
+       
+        
         int arreglo[] = new int[a];
         int x[] = new int[a];
         int c[] = new int[a];
