@@ -34,14 +34,14 @@ public class numeros {
     private void site3(int p, int y, int x) {
         if (y > p) {
             System.out.print(0 + "  ");
-            y-=1;
+            y -= 1;
             site3(p, y, x);
         }
         if (t < x && t < p) {
 
-            t+=1;
+            t += 1;
             System.out.print(t + "  ");
-           
+
             site3(p, y, x);
         }
 

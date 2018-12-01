@@ -14,29 +14,27 @@ import java.util.Scanner;
  *
  * @author Phill
  */
-public class Burbuja{
- public static void main(String args []){
-apoyoBurbuja bj =new apoyoBurbuja();
-Scanner sc = new Scanner(System.in);
-System.out.println("cuantos numeros se van a ingresar");
-int x = sc.nextInt();
-int c[] = new int[x];
-for (int a = 0;a < x ;a++ ) {
-	c[a]= sc.nextInt();
-}
+public class Burbuja {
 
-c=bj.burbuja(c);
+    public static void main(String args[]) {
+        apoyoBurbuja bj = new apoyoBurbuja();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("cuantos numeros se van a ingresar");
+        int x = sc.nextInt();
+        int c[] = new int[x];
+        for (int a = 0; a < x; a++) {
+            c[a] = sc.nextInt();
+        }
 
-     System.out.println(Arrays.toString(c));
+        c = bj.burbuja(c);
+
+        System.out.println(Arrays.toString(c));
 //int b[] = {21,28,36,15,2,95,7,1};
-	
 
-	//burbuja(c);
-	//mostrar(c);
-
-
-	}
-/*public static void burbuja(int c[]){
+        //burbuja(c);
+        //mostrar(c);
+    }
+    /*public static void burbuja(int c[]){
 
 		for (int i=0; i<c.length ; i++) {
 			for (int j=0;j<c.length-1;j++ ) {
@@ -57,5 +55,5 @@ public static void mostrar(int c[]){
 
 }
 
-}*/   
+}*/
 }
